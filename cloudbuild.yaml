@@ -10,7 +10,7 @@ steps:
   - image
   - deployment
   - helloworld
-  - web=gcr.io/$PROJECT_ID/helloworld:$BUILD_ID
+  - helloworld=gcr.io/$PROJECT_ID/helloworld:$BUILD_ID
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=test'
