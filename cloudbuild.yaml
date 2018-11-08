@@ -5,8 +5,8 @@ steps:
   args:
   - '-c'
   - |
-    docker build -t "gcr.io/sre-sray-development/helloworld"
-    docker push "gcr.io/sre-sray-development/helloworld"
+    docker build -t gcr.io/sre-sray-development/helloworld
+    docker push gcr.io/sre-sray-development/helloworld
         
 - name: gcr.io/cloud-builders/kubectl
   id: deploy
@@ -14,5 +14,5 @@ steps:
   args:
   - '-c'
   - |
-    glcoud container clusters get-credentials --project="sre-sray-development" "test"
+    glcoud container clusters get-credentials --project=sre-sray-development test
     kubectl apply -f deployment.yaml
