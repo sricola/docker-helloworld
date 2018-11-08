@@ -14,5 +14,5 @@ steps:
   args:
   - '-c'
   - |
-    glcoud container clusters get-credentials --project=sre-sray-development test
+    gcloud container clusters get-credentials --project=sre-sray-development test
     kubectl apply -f deployment.yaml
